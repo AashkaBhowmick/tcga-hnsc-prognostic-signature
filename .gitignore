@@ -1,0 +1,11 @@
+.Rhistory
+.Rproj.user/
+.RData
+renv/library/
+data/*
+!data/.gitkeep
+reports/figures/*
+reports/*.html
+*.pyc
+.ipynb_checkpoints/
+.venv/
