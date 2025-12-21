@@ -31,6 +31,11 @@ reports/*.html         # Rendered HTML reports
 reports/*_files/       # Quarto/RMarkdown intermediate files
 
 # ------------------------------------------------------------------------------
+# Notebooks / Scratch (exploratory work, not part of pipeline)
+# ------------------------------------------------------------------------------
+notebooks/*
+
+# ------------------------------------------------------------------------------
 # macOS system files
 # ------------------------------------------------------------------------------
 .DS_Store
@@ -52,3 +57,4 @@ __pycache__/
 *.log                  # Log files
 *.tmp                  # Temporary files
 *.bak                  # Backup files
+.Rproj.user
