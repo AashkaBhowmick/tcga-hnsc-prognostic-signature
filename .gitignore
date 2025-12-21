@@ -1,11 +1,54 @@
-.Rhistory
-.Rproj.user/
-.RData
-renv/library/
-data/*
-!data/.gitkeep
-reports/figures/*
-reports/*.html
+# ------------------------------------------------------------------------------
+# R / RStudio
+# ------------------------------------------------------------------------------
+.Rhistory              # R command history
+.Rproj.user/           # RStudio project user settings
+.RData                 # R workspace (saved objects)
+.Ruserdata             # RStudio user data
+
+# ------------------------------------------------------------------------------
+# renv (R environment management)
+# ------------------------------------------------------------------------------
+renv/library/          # Installed packages (reproducible via renv.lock)
+renv/staging/          # Temporary staging area during installs
+renv/sandbox/          # Sandbox for package isolation
+!renv/activate.R       # Keep activation script (required for renv)
+!renv/settings.json    # Keep renv settings
+
+# ------------------------------------------------------------------------------
+# Data files (too large for git, reproducible via download script)
+# ------------------------------------------------------------------------------
+data/*                 # All data files
+!data/.gitkeep         # Keep empty directory structure
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# ------------------------------------------------------------------------------
+# Generated outputs (reproducible via pipeline)
+# ------------------------------------------------------------------------------
+reports/figures/*      # Generated figures
+reports/*.html         # Rendered HTML reports
+reports/*_files/       # Quarto/RMarkdown intermediate files
+
+# ------------------------------------------------------------------------------
+# macOS system files
+# ------------------------------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ------------------------------------------------------------------------------
+# Python (if using reticulate or mixed workflows)
+# ------------------------------------------------------------------------------
 *.pyc
+__pycache__/
 .ipynb_checkpoints/
 .venv/
+.env/
+
+# ------------------------------------------------------------------------------
+# Miscellaneous
+# ------------------------------------------------------------------------------
+*.log                  # Log files
+*.tmp                  # Temporary files
+*.bak                  # Backup files
